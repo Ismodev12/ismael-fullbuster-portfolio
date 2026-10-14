@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import { Arrow, Media, Reveal } from "./ui.jsx";
 
+// Lien externe (site en ligne) : ouverture dans un nouvel onglet.
+const ext = (link) => (/^https?:/.test(link || "") ? { target: "_blank", rel: "noreferrer" } : {});
+
 /* Image de projet avec ses animations de survol :
    - la photo passe du noir & blanc à la couleur et zoome doucement ;
    - une pastille « Voir » suit le curseur ;
@@ -68,10 +71,10 @@ export default function ProjectCard({ project: p }) {
   // 01 — image immense plein cadre, titre posé dessus
   if (p.layout === "full") return (
     <Reveal as="article">
-      <a href={p.link} className="group block">
+      <a href={p.link} {...ext(p.link)} className="group block">
         {/* theme-dark : le texte posé sur la photo reste clair dans les deux thèmes */}
-        <Shot src={p.image} alt={alt} className="theme-dark aspect-[4/3] rounded-panel text-bone sm:aspect-[16/10] lg:aspect-[16/7]">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent transition-opacity duration-700 group-hover:opacity-80" />
+        <Shot src={p.image} alt={alt} position={p.position} className="theme-dark aspect-[4/3] rounded-panel text-bone sm:aspect-[16/10] lg:aspect-[16/7]">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/55 to-ink/10 transition-opacity duration-700 group-hover:opacity-70" />
           <span className="absolute left-6 top-6 rounded-full bg-accent px-5 py-2 font-display text-sm font-medium text-ink transition-transform duration-500 group-hover:-translate-y-1 sm:left-10 sm:top-10">{p.n} — {p.type}</span>
           <div className="absolute inset-x-6 bottom-6 flex flex-wrap items-end justify-between gap-6 sm:inset-x-10 sm:bottom-10">
             <Name className="text-[clamp(2.5rem,7.5vw,7.5rem)]">{p.name}</Name>
@@ -91,7 +94,7 @@ export default function ProjectCard({ project: p }) {
     const left = p.layout === "left";
     return (
       <Reveal as="article">
-        <a href={p.link} className="group grid items-end gap-10 lg:grid-cols-12 lg:gap-14">
+        <a href={p.link} {...ext(p.link)} className="group grid items-end gap-10 lg:grid-cols-12 lg:gap-14">
           <div className={`lg:col-span-7 ${left ? "" : "lg:order-2"}`}>
             <Shot
               src={p.image} alt={alt} position={p.position}
@@ -114,7 +117,7 @@ export default function ProjectCard({ project: p }) {
   // 04 — grand panneau clair
   return (
     <Reveal as="article">
-      <a href={p.link} className="group block rounded-panel bg-bone p-3 text-ink transition-transform duration-700 ease-out hover:-translate-y-2 sm:p-4">
+      <a href={p.link} {...ext(p.link)} className="group block rounded-panel bg-bone p-3 text-ink transition-transform duration-700 ease-out hover:-translate-y-2 sm:p-4">
         <div className="grid gap-8 px-4 pb-8 pt-8 sm:px-8 sm:pt-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
             <p className="eyebrow">{p.n} — {p.type}</p>

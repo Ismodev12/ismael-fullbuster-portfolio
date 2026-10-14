@@ -5,10 +5,10 @@ const stack = ["React.js", "Node.js", "Express.js"];
 
 export const projects = [
   {
-    n: "01", name: "Nova Shop", type: "Plateforme e-commerce", layout: "full",
-    tagline: "Plateforme e-commerce moderne.",
-    description: "Une expérience d’achat pensée pour être rapide, intuitive et agréable.",
-    image: "/assets/images/projects/nova-shop.jpg", stack, link: "#",
+    n: "01", name: "ANTIXOR", type: "Pâtisserie artisanale", layout: "full",
+    tagline: "Site vitrine et commande pour une pâtisserie artisanale.",
+    description: "Un site gourmand pour ANTIXOR Baked.com : produits, recettes et commande en quelques clics, avec un contact WhatsApp direct.",
+    image: "/assets/images/projects/antixor.jpg", position: "object-[82%_50%] sm:object-[70%_50%] lg:object-center", stack, link: "https://cookiesfood.netlify.app/",
   },
   {
     n: "02", name: "Carely", type: "Prise de rendez-vous", layout: "right",
