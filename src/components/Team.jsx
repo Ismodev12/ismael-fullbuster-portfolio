@@ -124,7 +124,7 @@ export default function Team() {
               {team.map((m, i) => (
                 <span key={i} className="relative -ml-3 grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-ink ring-4 ring-accent transition-transform duration-500 first:ml-0 group-hover:-translate-y-1 sm:h-16 sm:w-16" style={{ transitionDelay: `${i * 50}ms` }}>
                   <span className="absolute inset-0 grid place-items-center font-display text-sm font-bold text-accent sm:text-base">{initials(m.name)}</span>
-                  <img src={m.photo} alt="" className="relative h-full w-full origin-[50%_8%] scale-[2.1] object-cover object-top grayscale" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                  <img src={m.photo} alt="" style={{ transformOrigin: m.face || "50% 8%" }} className="relative h-full w-full scale-[2.1] object-cover object-top grayscale" onError={(e) => { e.currentTarget.style.display = "none"; }} />
                 </span>
               ))}
               <span className="-ml-3 grid h-12 w-12 place-items-center rounded-full border-2 border-dashed border-ink bg-accent font-display text-2xl font-bold ring-4 ring-accent transition-all duration-500 group-hover:rotate-90 group-hover:bg-ink group-hover:text-accent sm:h-16 sm:w-16">+</span>

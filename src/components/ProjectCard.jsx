@@ -128,7 +128,7 @@ export default function ProjectCard({ project: p }) {
             <Stack items={p.stack} className="mt-6" />
           </div>
         </div>
-        <Shot src={p.image} alt={alt} className="aspect-[4/3] rounded-[calc(theme(borderRadius.panel)-0.75rem)] bg-ink sm:aspect-[16/9] lg:aspect-[16/7]">
+        <Shot src={p.image} alt={alt} position={p.position} className="aspect-[4/3] rounded-[calc(theme(borderRadius.panel)-0.75rem)] bg-ink sm:aspect-[16/9] lg:aspect-[16/7]">
           <View className="absolute bottom-5 right-5 rounded-full bg-ink py-2 pl-7 pr-2 text-bone sm:bottom-8 sm:right-8" />
         </Shot>
       </a>

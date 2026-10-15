@@ -24,7 +24,7 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: "04", label: "Projets réalisés" },
+  { value: "06", label: "Projets réalisés" },
   { value: "03", label: "Technologies principales" },
   { value: "15+", label: "Interfaces conçues" },
   { value: "100%", label: "Passion du développement" },
