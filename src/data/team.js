@@ -11,5 +11,5 @@ export const team = [
   // Photo manquante : les initiales s'affichent à la place.
   { name: "Jolidon HOUNGUE", role: "Web designer & développeur front-end UI/UX", photo: photo("jolidon-cut.webp"), face: "50% 48%", link: "" },
   { name: "Rachid AGBANDOU", role: "CEO d’Ecomdev & développeur web", photo: photo("rachid-cut.webp"), face: "50% 55%", link: "" },
-  { name: "Kephy Kassa", role: "Experte analyste en cybersécurité", photo: photo("kephy-cut.webp"), link: "" },
+  { name: "Kephy Kassa", role: "Experte analyste en cybersécurité", photo: photo("kephy-cut.webp"), face: "50% 40%", link: "" },
 ];
