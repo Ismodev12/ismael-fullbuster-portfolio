@@ -2,9 +2,11 @@
 export const site = {
   name: "Ismael Fullbuster",
   role: "Développeur web full-stack JS",
-  email: "ismael.fullbuster@example.com",
-  linkedin: "https://www.linkedin.com/",
-  github: "https://github.com/",
+  email: "salifoukayodeism@gmail.com",
+  facebook: "https://www.facebook.com/ismael.fullbuster",
+  github: "https://github.com/Ismodev12",
+  // WhatsApp : numéro au format international, sans espace ni « + » (Bénin = 229).
+  whatsapp: { number: "2290149992183", display: "+229 01 49 99 21 83" },
   // Notification par e-mail à chaque nouveau visiteur (une seule fois par personne).
   // 1. Créez une clé gratuite sur https://web3forms.com avec l'adresse qui doit recevoir les alertes.
   // 2. Collez-la ci-dessous. Clé vide = notifications désactivées.

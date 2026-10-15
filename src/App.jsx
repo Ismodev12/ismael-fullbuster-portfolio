@@ -16,6 +16,7 @@ import Faq from "./components/Faq.jsx";
 import Offer from "./components/Offer.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 
 export default function App() {
   // Prévient par e-mail lors d'une nouvelle visite (voir src/lib/visitNotifier.js).
@@ -41,6 +42,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

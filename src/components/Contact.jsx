@@ -19,7 +19,8 @@ export default function Contact() {
               </p>
               <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3 font-display text-lg font-medium">
                 <li><a className="link-line break-all" href={`mailto:${site.email}`}>{site.email}</a></li>
-                <li><a className="link-line" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a></li>
+                <li><a className="link-line" href={`https://wa.me/${site.whatsapp.number}`} target="_blank" rel="noreferrer">WhatsApp · {site.whatsapp.display} ↗</a></li>
+                <li><a className="link-line" href={site.facebook} target="_blank" rel="noreferrer">Facebook ↗</a></li>
                 <li><a className="link-line" href={site.github} target="_blank" rel="noreferrer">GitHub ↗</a></li>
               </ul>
             </Reveal>

@@ -47,6 +47,7 @@
 /* Rideau fermé : toute la Hero et la navigation attendent en coulisses. */
 header { transition: transform 1s cubic-bezier(.2,.9,.2,1) .2s, opacity .6s ease-out .2s; }
 html[data-stage="closed"] header { opacity: 0; transform: translateY(-140%); transition: none; }
+html[data-stage="closed"] .wa-btn { opacity: 0; pointer-events: none; }
 html[data-stage="played"] #top [data-reveal] { transition-delay: 0ms; }
 html[data-stage="closed"] #top [data-reveal] {
   opacity: 0; filter: blur(10px); transition: none;
